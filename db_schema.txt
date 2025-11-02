@@ -10,6 +10,7 @@ CREATE TABLE tasks (
     assignee_id INTEGER,
     status TEXT DEFAULT 'open',
     priority TEXT DEFAULT 'medium',
+    deadline TEXT,  -- NEW: stores ISO date format
     created_at TEXT,
     updated_at TEXT,
     FOREIGN KEY (assignee_id) REFERENCES users (id)
